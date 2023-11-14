@@ -9,7 +9,11 @@ public class LibrarianWorkspaceContext : DbContext
         : base(options)
     {
     }
+    
+    public LibrarianWorkspaceContext()
+    {
+    }
 
-    public DbSet<Book> Book { get; set; } = default!;
-    public DbSet<Reader> Reader { get; set; } = default!;
+    public virtual DbSet<Book> Book { get; set; }
+    public virtual DbSet<Reader> Reader { get; set; }
 }
